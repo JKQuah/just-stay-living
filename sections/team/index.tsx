@@ -81,7 +81,7 @@ export default function Team() {
                     alt={team.title.toLowerCase().replaceAll(" ", "-")}
                     width={1080}
                     height={1080}
-                    className="w-40 h-40 mx-auto"
+                    className="w-32 h-32 mx-auto"
                   />
 
                   <div className="space-y-2">
