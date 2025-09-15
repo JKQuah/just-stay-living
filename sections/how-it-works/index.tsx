@@ -57,11 +57,19 @@ export default function HowItWorks() {
           {steps.map((step, index) => {
             return (
               <SlideUpContainer key={index} delay={index}>
-                <div className="space-y-4 bg-white shadow-sm md:shadow-lg hover:shadow-2xl hover:scale-105 p-6 py-8 w-full h-full flex flex-col justify-center">
+                <div
+                  className={
+                    "space-y-4 bg-white shadow-sm md:shadow-lg hover:shadow-2xl hover:scale-105 p-6 py-8 w-full h-full flex flex-col justify-center "
+                  }
+                >
                   <p className="uppercase text-xs">Step {index + 1}</p>
                   <div className="flex flex-row gap-4 items-center flex-1">
                     <p className="text-secondary">{step.icon}</p>
-                    <h3 className="text-secondary font-bold text-lg">
+                    <h3
+                      className={
+                        "text-secondary font-bold md:text-lg text-[14px]"
+                      }
+                    >
                       {step.title}
                     </h3>
                   </div>

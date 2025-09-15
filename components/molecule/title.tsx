@@ -12,7 +12,9 @@ export default function Title({ heading, subtitle }: ITitle) {
         <h2 className="text-[28px] font-bold">{heading}</h2>
       </SlideUpContainer>
       <SlideUpContainer delay={2}>
-        <p className="text-[16px] text-foreground">{subtitle}</p>
+        <p className="text-[16px] text-foreground md:max-w-1/2 leading-7">
+          {subtitle}
+        </p>
       </SlideUpContainer>
     </div>
   );

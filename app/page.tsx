@@ -9,6 +9,7 @@ import {
   Footer,
 } from "@/sections";
 import FloatingButton from "@/sections/floating";
+import Team from "@/sections/team";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
 
       {/* hero */}
       <Hero />
+
+      {/* Team */}
+      <Team />
 
       {/* About Us */}
       <AboutUs />
