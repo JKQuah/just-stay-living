@@ -53,16 +53,18 @@ export default function HowItWorks() {
           }
           subtitle="We complete every step carefully."
         />
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {steps.map((step, index) => {
             return (
               <SlideUpContainer key={index} delay={index}>
-                <div className="space-y-4 bg-white shadow-lg hover:shadow-2xl hover:scale-105 p-6 py-8 h-full">
-                  <p className="text-secondary">{step.icon}</p>
+                <div className="space-y-4 bg-white shadow-sm md:shadow-lg hover:shadow-2xl hover:scale-105 p-6 py-8 w-full h-full flex flex-col justify-center">
                   <p className="uppercase text-xs">Step {index + 1}</p>
-                  <h3 className="text-secondary font-bold text-lg">
-                    {step.title}
-                  </h3>
+                  <div className="flex flex-row gap-4 items-center flex-1">
+                    <p className="text-secondary">{step.icon}</p>
+                    <h3 className="text-secondary font-bold text-lg">
+                      {step.title}
+                    </h3>
+                  </div>
                 </div>
               </SlideUpContainer>
             );

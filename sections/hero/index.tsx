@@ -16,7 +16,7 @@ export default function Hero() {
               <p className="uppercase text-xl text-secondary">Try it now</p>
             </SlideUpContainer>
             <SlideUpContainer delay={1}>
-              <div className="text-primary uppercase text-7xl space-y-4">
+              <div className="text-primary uppercase text-5xl md:text-7xl space-y-4">
                 <h1 className="text-primary">
                   Complete Home <br /> Solutions:
                 </h1>
@@ -26,7 +26,7 @@ export default function Hero() {
                   duration={2}
                 />
 
-                <p className="!text-xl leading-8 normal-case font-rubik text-foreground">
+                <p className="!text-sm md:!text-xl leading-8 normal-case font-rubik text-foreground">
                   Managing your house units should be stress-free. At{" "}
                   <span className="font-bold text-primary">
                     Just Stay Living
@@ -40,7 +40,9 @@ export default function Hero() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-8">
             <SlideUpContainer delay={2}>
               <Link href={"https://wa.me/601131916782"} target="__blank">
-                <Button className="p-6 text-lg">Click for Quotation</Button>
+                <Button className="p-6 text-sm md:text-lg">
+                  Click for Quotation
+                </Button>
               </Link>
             </SlideUpContainer>
             <div>
@@ -59,7 +61,7 @@ export default function Hero() {
         </div>
 
         <SlideUpContainer delay={2}>
-          <DirectionAwareHover
+          {/* <DirectionAwareHover
             className="!w-full !h-full rounded-xl"
             imageUrl="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           >
@@ -67,7 +69,17 @@ export default function Hero() {
             <p className="font-normal text-sm">
               Completion Time: 2 months 17 days
             </p>
-          </DirectionAwareHover>
+          </DirectionAwareHover> */}
+          <video
+            src={"./hero.mp4"}
+            width="600"
+            height="150"
+            controls={false}
+            loop
+            muted
+            autoPlay
+            className="h-[600px] w-full object-cover inset-0 object-top rounded-xl"
+          />
         </SlideUpContainer>
       </div>
     </div>
