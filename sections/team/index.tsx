@@ -41,26 +41,31 @@ export default function Team() {
 
         <div className="my-16 p-16 pb-4 rounded-lg bg-secondary-light relative">
           <div className="space-y-8">
-            <div className="space-y-2">
-              <h3 className="font-bold text-secondary text-lg">
-                Just Stay Living Sdn. Bhd.
-              </h3>
-              <p className="leading-8">
-                A one-stop property management company dedicated to helping
-                property owners maximize the value and potential of their
-                investments. We provide end-to-end solutions covering every
-                aspect of property management — from design and renovation to
-                marketing, leasing, and financial management.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-bold text-secondary text-lg">Our Goals</h3>
-              <p className="leading-8 max-w-full md:max-w-[80%]">
-                Provide property owners with peace of mind and profitable
-                returns, while offering tenants beautifully designed,
-                well-managed living spaces that feel like home.
-              </p>
-            </div>
+            <SlideUpContainer delay={0}>
+              <div className="space-y-2">
+                <h3 className="font-bold text-secondary text-lg">
+                  Just Stay Living Sdn. Bhd.
+                </h3>
+                <p className="leading-8">
+                  A one-stop property management company dedicated to helping
+                  property owners maximize the value and potential of their
+                  investments. We provide end-to-end solutions covering every
+                  aspect of property management — from design and renovation to
+                  marketing, leasing, and financial management.
+                </p>
+              </div>
+            </SlideUpContainer>
+
+            <SlideUpContainer delay={1}>
+              <div className="space-y-2">
+                <h3 className="font-bold text-secondary text-lg">Our Goals</h3>
+                <p className="leading-8 max-w-full md:max-w-[80%]">
+                  Provide property owners with peace of mind and profitable
+                  returns, while offering tenants beautifully designed,
+                  well-managed living spaces that feel like home.
+                </p>
+              </div>
+            </SlideUpContainer>
 
             <Image
               src={"/house.png"}
@@ -74,7 +79,7 @@ export default function Team() {
         <div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
             {teams.map((team, index) => (
-              <SlideUpContainer delay={index * 2} key={team.title}>
+              <SlideUpContainer delay={index + 1} key={team.title}>
                 <div className="space-y-8 text-center">
                   <Image
                     src={team.imageUrl}

@@ -1,6 +1,6 @@
 import SlideUpContainer from "@/components/molecule/slide-up-container";
 import Title from "@/components/molecule/title";
-import { Clock9, MapPin } from "lucide-react";
+import { Clock9, MapPin, MousePointer2 } from "lucide-react";
 import Link from "next/link";
 
 const contacts = [
@@ -57,7 +57,7 @@ export default function Contact() {
               className="border-0 rounded-2xl w-full"
             ></iframe>
           </SlideUpContainer>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-rows-2 gap-8 items-center">
             {contacts.map((contact, index) => (
               <SlideUpContainer key={index} delay={index + 2}>
                 <div className="space-y-4">
@@ -65,30 +65,39 @@ export default function Contact() {
                     {contact.icon}
                   </div>
 
-                  <div className="space-y-2">
-                    <h3 className="font-bold text-lg text-secondary">
-                      {contact.title}
-                    </h3>
-                    {contact.link ? (
-                      <Link
-                        href={contact.link ?? ""}
-                        target="__blank"
-                        className="hover:underline"
-                      >
-                        {contact.description.map((item, ind) => (
-                          <p className="text-sm leading-6" key={ind}>
-                            {item}
-                          </p>
-                        ))}
-                      </Link>
+                  <Link
+                    href={contact.link ?? ""}
+                    target="__blank"
+                    className="hover:underline"
+                  >
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-lg text-secondary">
+                        {contact.title}
+                        {contact.link && (
+                          <MousePointer2
+                            className="inline mb-2 font-bold"
+                            size={20}
+                          />
+                        )}
+                      </h3>
+                      {contact.description.map((item, ind) => (
+                        <p className="text-sm leading-6" key={ind}>
+                          {item}
+                        </p>
+                      ))}
+                    </div>
+                  </Link>
+
+                  {/* {contact.link ? (
+                     
                     ) : (
                       contact.description.map((item, ind) => (
                         <p className="text-sm leading-6" key={ind}>
                           {item}
                         </p>
                       ))
-                    )}
-                  </div>
+                    )} */}
+                  {/* </div> */}
                 </div>
               </SlideUpContainer>
             ))}

@@ -1,7 +1,6 @@
 import SlideUpContainer from "@/components/molecule/slide-up-container";
 import Title from "@/components/molecule/title";
 import { ShieldCheck, SplinePointer, ThumbsUp, Zap } from "lucide-react";
-import Image from "next/image";
 
 const contents = [
   {
