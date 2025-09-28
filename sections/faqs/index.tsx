@@ -24,6 +24,16 @@ const items = [
     content:
       "Our makeovers are designed to increase rental value and attract quality tenants faster. In many cases, owners see higher rental rates compared to unfurnished or poorly presented units. ",
   },
+  {
+    title: "4. Who is the target tenant?",
+    content:
+      "Our role is to identify and attract the <b>best-fit tenant</b> for your property, we prefer students, working adults, and couplesWhat is Co-living?",
+  },
+  {
+    title: "5. What is Co-living?",
+    content:
+      "Co-living is a modern housing concept where tenants rent <b>private bedrooms</b> while sharing <b>common spaces</b> such as the living room, kitchen, and facilities.",
+  },
 ];
 
 export default function Faqs() {
@@ -56,7 +66,9 @@ export default function Faqs() {
                   <AccordionTrigger className="data-[state=closed]:py-2 text-md font-bold text-primary">
                     {title}
                   </AccordionTrigger>
-                  <AccordionContent>{content}</AccordionContent>
+                  <AccordionContent>
+                    <p dangerouslySetInnerHTML={{ __html: content }}></p>
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
