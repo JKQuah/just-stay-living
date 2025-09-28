@@ -78,6 +78,7 @@ export default function Hero() {
             loop
             muted
             autoPlay
+            playsInline
             className="h-[600px] w-full object-cover inset-0 object-top rounded-xl"
           />
         </SlideUpContainer>
